@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-sm-8">
+    {% for blog in post %}
+        <h2>{{blog.post_title}}</h2>
+        <small>Posted by {{blog.post_author}} on {{blog.post_date}}</small>
+        <br><br>
+        <p>{{blog.post_body}}</p>
+        <br>
+        <hr />
+        <br>
+    {% endfor %}
+</div>
+{% endblock content %}
